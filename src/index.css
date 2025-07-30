@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Soft Brutalist Design System */
+
+@layer base {
+  :root {
+    /* Soft Brutalist Color Palette */
+    --background: 35 20% 96%;
+    --foreground: 25 15% 25%;
+
+    --card: 35 20% 98%;
+    --card-foreground: 25 15% 25%;
+
+    --popover: 35 20% 98%;
+    --popover-foreground: 25 15% 25%;
+
+    /* Sage Green Primary */
+    --primary: 120 15% 55%;
+    --primary-foreground: 35 20% 96%;
+
+    /* Dusty Rose Secondary */
+    --secondary: 350 25% 75%;
+    --secondary-foreground: 25 15% 25%;
+
+    /* Warm Cream Muted */
+    --muted: 35 30% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Lavender Accent */
+    --accent: 260 20% 75%;
+    --accent-foreground: 25 15% 25%;
+
+    --destructive: 0 60% 70%;
+    --destructive-foreground: 35 20% 96%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 88%;
+    --ring: 120 15% 55%;
+
+    --radius: 0;
+
+    /* Custom Soft Brutalist Colors */
+    --sage: 120 15% 55%;
+    --sage-light: 120 20% 75%;
+    --sage-dark: 120 20% 35%;
+    
+    --rose: 350 25% 75%;
+    --rose-light: 350 30% 85%;
+    --rose-dark: 350 35% 55%;
+    
+    --cream: 35 30% 90%;
+    --cream-light: 35 40% 95%;
+    --cream-dark: 35 25% 80%;
+    
+    --lavender: 260 20% 75%;
+    --lavender-light: 260 25% 85%;
+    --lavender-dark: 260 25% 55%;
+
+    /* Gradients */
+    --gradient-sage: linear-gradient(135deg, hsl(var(--sage)) 0%, hsl(var(--sage-light)) 100%);
+    --gradient-rose: linear-gradient(135deg, hsl(var(--rose)) 0%, hsl(var(--rose-light)) 100%);
+    --gradient-cream: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--cream-light)) 100%);
+    --gradient-multi: linear-gradient(135deg, hsl(var(--sage-light)) 0%, hsl(var(--rose-light)) 50%, hsl(var(--lavender-light)) 100%);
+
+    /* Brutalist Shadows */
+    --shadow-brutal: 8px 8px 0px hsl(var(--sage-dark));
+    --shadow-soft: 4px 4px 0px hsl(var(--rose));
+    --shadow-accent: 6px 6px 0px hsl(var(--lavender-dark));
+
+    /* Typography Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+    --text-8xl: 6rem;
+    --text-9xl: 8rem;
+
+    /* Brutalist Spacing */
+    --space-brutal: 24px;
+    --space-soft: 16px;
+    --space-minimal: 8px;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Brutalist Button Variants */
+  .btn-brutal {
+    @apply px-6 py-3 font-bold uppercase tracking-wider transition-all duration-75;
+    @apply hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2;
+  }
+
+  .btn-sage {
+    @apply btn-brutal bg-sage text-primary-foreground;
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .btn-rose {
+    @apply btn-brutal bg-rose text-secondary-foreground;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-lavender {
+    @apply btn-brutal bg-lavender text-accent-foreground;
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* Brutalist Cards */
+  .card-brutal {
+    @apply p-6 transition-all duration-150;
+    @apply hover:translate-x-2 hover:translate-y-2;
+  }
+
+  .card-sage {
+    @apply card-brutal bg-sage-light;
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .card-rose {
+    @apply card-brutal bg-rose-light;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-cream {
+    @apply card-brutal bg-cream-light;
+    box-shadow: var(--shadow-accent);
+  }
+
+  /* Typography Classes */
+  .heading-brutal {
+    @apply font-black uppercase tracking-tighter leading-none;
+  }
+
+  .heading-xl {
+    @apply heading-brutal text-5xl md:text-7xl lg:text-8xl;
+  }
+
+  .heading-lg {
+    @apply heading-brutal text-3xl md:text-5xl lg:text-6xl;
+  }
+
+  .heading-md {
+    @apply heading-brutal text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  /* Color Block Backgrounds */
+  .bg-sage-gradient {
+    background: var(--gradient-sage);
+  }
+
+  .bg-rose-gradient {
+    background: var(--gradient-rose);
+  }
+
+  .bg-cream-gradient {
+    background: var(--gradient-cream);
+  }
+
+  .bg-multi-gradient {
+    background: var(--gradient-multi);
+  }
+
+  /* Brutalist Borders */
+  .border-brutal {
+    @apply border-4 border-foreground;
+  }
+
+  .border-sage-brutal {
+    @apply border-4 border-sage-dark;
+  }
+
+  .border-rose-brutal {
+    @apply border-4 border-rose-dark;
+  }
+
+  /* Asymmetrical Elements */
+  .asymmetric-1 {
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  }
+
+  .asymmetric-2 {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  }
+
+  .asymmetric-3 {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 85%);
+  }
+
+  /* Interactive Elements */
+  .hover-brutal {
+    @apply transition-all duration-75 hover:translate-x-1 hover:translate-y-1;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-150 hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .cursor-effect {
+    @apply transition-all duration-300 hover:scale-105 hover:rotate-1;
+  }
+}
+
+@layer utilities {
+  /* Spacing Utilities */
+  .space-brutal {
+    margin: var(--space-brutal);
+  }
+
+  .space-soft {
+    margin: var(--space-soft);
+  }
+
+  .space-minimal {
+    margin: var(--space-minimal);
+  }
+
+  /* Custom Text Sizes */
+  .text-brutal-xl {
+    font-size: var(--text-8xl);
+    line-height: 0.8;
+  }
+
+  .text-brutal-lg {
+    font-size: var(--text-6xl);
+    line-height: 0.9;
+  }
+
+  .text-brutal-md {
+    font-size: var(--text-4xl);
+    line-height: 0.95;
+  }
+  /* ✅ Scroll Animations (Fixes blinking) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  will-change: opacity, transform;
+}
+
+/* ✅ Brutal Entrance Animation */
+@keyframes brutal-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-brutal-entrance {
+  animation: brutal-entrance 0.6s ease-out forwards;
+}
+
+/* ✅ Floating Shapes Animation */
+@keyframes brutal-float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-brutal-float {
+  animation: brutal-float 3s ease-in-out infinite;
+}
+
+}
