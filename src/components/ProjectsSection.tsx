@@ -45,10 +45,10 @@ const projects: Project[] = [
   },
   {
   id: 4,
-  title: "Savana E-commerce Platform",
+  title: "Savana Website Redesign",
   category: "FULL STACK",
   description:
-    "A fully functional e-commerce web app featuring product listings, shopping cart, wishlist, and order management. Built with a custom React frontend and Express backend, styled with Tailwind, and deployed on Vercel.",
+    "A modern redesign of the Savana e-commerce website, featuring a fully responsive UI, improved user experience, and working backend integration for cart, wishlist, and product APIs.",
   tech: ["React", "Express", "Tailwind CSS"],
   color: "cream",
   live: "https://savana-redesign.vercel.app/",
