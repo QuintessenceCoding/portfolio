@@ -4,7 +4,7 @@
 
 My personal portfolio showcasing selected projects, skills, and ways to connect with me.
 
-🔗 **Live:** [View Here](https://your-vercel-link.vercel.app)
+🔗 **Live:** [View Here](https://portfolio-blond-psi-42.vercel.app/)
 
 ---
 
