@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: "Smart PDF Q&A Bot",
     category: "AI / BACKEND",
     description:
-      "A chatbot that extracts context-aware answers from uploaded PDFs using LangChain, OpenAI embeddings, and Streamlit. Deployed on GitHub with full backend functionality.",
+      "Smart PDF Q&A Bot – A chatbot that extracts context-aware answers from uploaded PDFs using LangChain, Google Gemini API, and vector embeddings. Built with Streamlit for the UI and deployed on GitHub with full backend functionality.",
     tech: ["Python", "LangChain", "Streamlit"],
     color: "sage",
     live: "https://smart-pdf-app-bot-3gwubr78brfpi8jufga6v4.streamlit.app/",
