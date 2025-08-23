@@ -36,12 +36,14 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Algorithm Visualizer",
-    category: "WEB DEV",
+    title: "Smart Resume & Portfolio Helper",
+    category: "FULL STACK / AI",
     description:
-      "A web-based interactive platform to visualize sorting algorithms step-by-step with animations and adjustable speeds, helping learners understand algorithm behavior intuitively. Built with React, TypeScript, and Tailwind for a smooth UI and educational experience.",
-    tech: ["React", "TypeScript", "Tailwind"],
+      "Engineered a full-stack web application from conception to deployment, featuring an AI-powered resume enhancer and a multi-theme portfolio generator. Built a secure Python backend (FastAPI) integrating Google Gemini API for parsing and rewriting content, a responsive React + TypeScript frontend with Tailwind, and persistent storage via SQLAlchemy + SQLite. Deployed on Vercel (frontend) and Render (backend) with a CI/CD pipeline.",
+    tech: ["FastAPI", "React", "Tailwind"],
     color: "lavender",
+    live: "https://smart-resume-helper.vercel.app/",
+    code: "https://github.com/QuintessenceCoding/smart-resume-helper",
   },
   {
   id: 4,
