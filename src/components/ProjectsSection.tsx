@@ -46,16 +46,26 @@ const projects: Project[] = [
     code: "https://github.com/QuintessenceCoding/smart-resume-helper",
   },
   {
-  id: 4,
-  title: "Savana Website Redesign",
-  category: "FULL STACK",
-  description:
-    "A modern redesign of the Savana e-commerce website, featuring a fully responsive UI, improved user experience, and working backend integration for cart, wishlist, and product APIs.",
-  tech: ["React", "Express", "Tailwind CSS"],
-  color: "cream",
-  live: "https://savana-redesign.vercel.app/",
-  code: "https://github.com/QuintessenceCoding/savana-redesign",
-},
+    id: 4,
+    title: "Savana Website Redesign",
+    category: "FULL STACK",
+    description:
+      "A modern redesign of the Savana e-commerce website, featuring a fully responsive UI, improved user experience, and working backend integration for cart, wishlist, and product APIs.",
+    tech: ["React", "Express", "Tailwind CSS"],
+    color: "cream",
+    live: "https://savana-redesign.vercel.app/",
+    code: "https://github.com/QuintessenceCoding/savana-redesign",
+  },
+  {
+    id: 5,
+    title: "FlashFlood AI: Real-Time Urban Flood Monitoring",
+    category: "FULL STACK / AI",
+    description:
+      "Built a real-time AI dashboard for flood detection and prediction using simulated IoT sensor data. Implemented an XGBoost model for flood risk classification, integrated Gemini API for automated insights, and developed a React-based dashboard with Leaflet maps visualizing live MQTT data streams. Containerized backend stack (FastAPI, PostgreSQL + PostGIS, Mosquitto) via Docker Compose for deployment.",
+    tech: ["FastAPI", "React", "Docker", "PostgreSQL"],
+    color: "rose",
+    code: "https://github.com/QuintessenceCoding/flash-flood-monitor"
+  },
 ];
 
 
@@ -212,15 +222,15 @@ const ProjectsSection = () => {
                 
                 <div className="flex gap-4 flex-wrap">
                   {selectedProject.live && (
-                   <a href={selectedProject.live} target="_blank" rel="noopener noreferrer">
-                   <Button variant="brutal">VIEW LIVE</Button>
-                   </a>
+                    <a href={selectedProject.live} target="_blank" rel="noopener noreferrer">
+                    <Button variant="brutal">VIEW LIVE</Button>
+                    </a>
                   )}
-                   {selectedProject.code && (
-                     <a href={selectedProject.code} target="_blank" rel="noopener noreferrer">
-                       <Button variant="brutal-rose">VIEW CODE</Button>
-                     </a>
-                   )}
+                    {selectedProject.code && (
+                      <a href={selectedProject.code} target="_blank" rel="noopener noreferrer">
+                          <Button variant="brutal-rose">VIEW CODE</Button>
+                      </a>
+                    )}
                 </div>
               </div>
             </div>
