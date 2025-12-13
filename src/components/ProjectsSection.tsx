@@ -15,6 +15,16 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "Turiya: Neuro-Symbolic Agentic System",
+    category: "COGNITIVE AI / SYSTEM ARCHITECTURE",
+    description:
+      "Architected a local-first cognitive architecture running autonomous agents on CPU via 4-bit quantization. Features an asynchronous multi-agent swarm (Perception, Reasoning, Learning) and Neuro-Symbolic memory fusing semantic vector embeddings with episodic knowledge graphs.",
+    tech: ["Python", "Llama.cpp", "NetworkX", "SQLite"],
+    color: "lavender",
+    code: "https://github.com/QuintessenceCoding/Turiya",
+  },
+  {
+    id: 2,
     title: "Smart PDF Q&A Bot",
     category: "AI / BACKEND",
     description:
@@ -25,7 +35,7 @@ const projects: Project[] = [
     code: "https://github.com/QuintessenceCoding/smart-pdf-qa-bot",
   },
   {
-    id: 2,
+    id: 3,
     title: "Ethno Vibes",
     category: "COMPUTER VISION",
     description:
@@ -35,7 +45,7 @@ const projects: Project[] = [
     code: "https://github.com/QuintessenceCoding/ethno-vibes"
   },
   {
-    id: 3,
+    id: 4,
     title: "Smart Resume & Portfolio Helper",
     category: "FULL STACK / AI",
     description:
@@ -46,7 +56,7 @@ const projects: Project[] = [
     code: "https://github.com/QuintessenceCoding/smart-resume-helper",
   },
   {
-    id: 4,
+    id: 5,
     title: "Savana Website Redesign",
     category: "FULL STACK",
     description:
@@ -57,7 +67,7 @@ const projects: Project[] = [
     code: "https://github.com/QuintessenceCoding/savana-redesign",
   },
   {
-    id: 5,
+    id: 6,
     title: "FlashFlood AI: Real-Time Urban Flood Monitoring",
     category: "FULL STACK / AI",
     description:
