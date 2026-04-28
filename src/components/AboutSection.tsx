@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import myPhoto from "@/assets/my-photo.jpg";
 
 const AboutSection = () => {
   const aboutRef = useRef<HTMLElement>(null);
@@ -33,10 +34,12 @@ const AboutSection = () => {
           <div className="relative animate-on-scroll">
             <div className="absolute -top-6 -left-6 w-full h-full bg-rose-light asymmetric-1"></div>
             <div className="relative bg-sage-light p-8 border-brutal">
-              <div className="w-full h-80 bg-gradient-to-br from-sage to-lavender flex items-center justify-center">
-                <div className="w-48 h-48 bg-background rounded-full flex items-center justify-center">
-                  <span className="heading-md text-sage">PHOTO</span>
-                </div>
+              <div className="w-full h-80 overflow-hidden bg-gradient-to-br from-sage to-lavender">
+                <img
+                  src={myPhoto}
+                  alt="Ishika Vashisht"
+                  className="h-full w-full object-cover object-center"
+                />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-lavender animate-brutal-float"></div>
