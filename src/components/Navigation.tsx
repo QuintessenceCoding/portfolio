@@ -37,11 +37,11 @@ const Navigation = () => {
           </button>
 
           <div className="hidden md:flex space-x-8">
-            {["about", "projects", "skills", "contact"].map((item) => (
+            {["about", "projects", "publications", "skills", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="heading-brutal text-lg hover:text-sage transition-all duration-150 hover:translate-x-1 hover:translate-y-1"
+                className="heading-brutal text-base lg:text-lg hover:text-sage transition-all duration-150 hover:translate-x-1 hover:translate-y-1"
               >
                 {item.toUpperCase()}
               </button>
